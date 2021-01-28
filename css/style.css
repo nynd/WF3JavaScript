@@ -1,0 +1,19 @@
+body{
+
+    justify-content: center;
+    background-color: green;
+    padding: 100px;
+    margin : 100px;
+}
+
+#centrerDiv{
+
+    justify-content: center;
+    background-color:blue;
+}
+
+.square{
+
+    width: 100px;
+    height: 100px;
+}

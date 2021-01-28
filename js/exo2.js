@@ -24,7 +24,7 @@ window.onload = function (){
             prixUnite: 1.90,
             quantite : 6
         }
-    ];
+       ];
 
     //**Traduire en ceci: crée une liste qui s'appelera prixTotalsFruitsLegumes cette liste devra contenir le total pour chaque fruit&légume. 
     // Ce prix total sera variable par rapport à la quantité. (à noté que cette liste au début est vide).**
@@ -47,3 +47,24 @@ window.onload = function (){
     console.log(prixTotal);
 
     }
+
+
+    var prixTotalsFruitsLegumes = [];
+
+     for(var Legume of panier){
+        var Total = Legume.prixUnite * Legume.quantite ;
+        prixTotalsFruitsLegumes.push(Total);
+     };
+     console.log("key :" ,prixTotalsFruitsLegumes , "value :", prixTotalsFruitsLegumes);
+
+     //Traduire en code ceci : crée un résultat permettant de faire le total de prixTotalsFruitsLegumes.
+
+     var prixTotal = 0;
+     for(var i= prixTotalsFruitsLegumes.length-1; i>=0 ; i--){
+         prixTotal = prixTotal + prixTotalsFruitsLegumes[i] ; 
+         prixTotalsFruitsLegumes.shift();   
+     };
+    console.log(prixTotal);
+    console.log(prixTotalsFruitsLegumes);
+
+
